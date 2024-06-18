@@ -1,8 +1,12 @@
 {
+  "version": 2,
   "builds": [
-    { "src": "Dockerfile", "use": "@vercel/docker" }
+    {
+      "src": "vBlogServer/wsgi.py",
+      "use": "@vercel/python"
+    }
   ],
   "routes": [
-    { "src": "/(.*)", "dest": "/app/your_django_app_name/wsgi.py" }
+    { "src": "/(.*)", "dest": "vBlogServer/wsgi.py" }
   ]
 }
