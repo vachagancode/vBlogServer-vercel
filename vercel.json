@@ -8,5 +8,11 @@
   ],
   "routes": [
     { "src": "/(.*)", "dest": "vBlogServer/wsgi.py" }
-  ]
+  ],
+  "functions": {
+    "api": {
+      "runtime": "@vercel/python",
+      "timeout": 30 
+    }
+  }
 }
