@@ -28,7 +28,7 @@ SECRET_KEY = f"{get_random_secret_key()}"
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.vercel.app', '.now.sh']
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
