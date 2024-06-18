@@ -1,5 +1,10 @@
-# build_files.sh
-pip install -r requirements.txt
+#!/bin/bash
 
-# make migrations
-python manage.py migrate 
+# Install Python and pip
+apt-get update && apt-get install -y python3 python3-pip
+
+# Install dependencies
+pip3 install -r requirements.txt
+
+# Collect static files
+python3 manage.py collectstatic --noinput
